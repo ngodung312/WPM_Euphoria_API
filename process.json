@@ -1,0 +1,16 @@
+{
+  "apps" : [{
+    "name"      : "wpm_api",
+    "script"    : "./server.js",
+    "instances" : 0,
+    "exec_mode" : "cluster",
+    "env": {
+      "NODE_ENV": "development",
+      "NODE_PORT":8000
+    },
+    "env_production" : {
+      "NODE_ENV": "production",
+      "NODE_PORT":8000
+    }
+  }]
+}
