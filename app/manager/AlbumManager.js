@@ -42,10 +42,6 @@ module.exports = {
 
     getAll: function (accessUserId, accessUserRole, eventId, callback) {
         try {
-            if ( accessUserRole < Constant.USER_ROLE.EVENT_HOST ) {
-                return callback(1, 'invalid_user_right', 403, null, null);
-            }
-
             let attributes = ['id', 'albumTitle', 'albumDesc', 'albumSize', 'eventId', 'deleted', 'createdBy', 'createdAt', 'updatedBy', 'updatedAt'];
             let where = {};
             where.deleted = Constant.DELETED.NO;

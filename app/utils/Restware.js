@@ -43,6 +43,7 @@ const sendSuccessMany = function (res, data, iHttpCode) {
     let out = {};
 
     if(data){
+        data.bucketUrl = Config.fileurl;
         out = data;
     }
 
